@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Search Console verification -->
-    <meta name="google-site-verification" content="Ft9DFhja6WU9derzeo0zV_FXVBEqnosRe3Z8cuwRCh0" />
+    <meta name="google-site-verification" content="<meta name="google-site-verification" content="-IF7w72Ri2BwyHERIY7JdnJ8aAgEG17G0Kb_Ldhqfp8" />" />
 
     <!-- Website information -->
     <title>Nocturne's Archive | BK FUTURE</title>
@@ -353,6 +353,27 @@
             flex-direction: column;
             gap: 18px;
         }
+
+
+        /* Author-supplied cover artwork */
+        .archive-cover {
+            float: left; width: 138px; height: 207px; object-fit: contain;
+            margin: 0 24px 14px 0; background: #080808;
+            border: 1px solid rgba(132, 48, 48, .55);
+            box-shadow: 0 12px 28px rgba(0,0,0,.38);
+        }
+        .archive-entry::after { content: ""; display: block; clear: both; }
+        .detail-cover { display: block; width: min(240px, 70%); max-height: 420px;
+            object-fit: contain; margin: 22px auto 28px; background: #080808;
+            border: 1px solid rgba(132,48,48,.6); box-shadow: 0 12px 35px rgba(0,0,0,.45); }
+        .poetry-cover-link { display:block; width:min(250px,100%); margin:24px auto; }
+        .poetry-cover { width:100%; height:auto; display:block; object-fit:contain;
+            border:1px solid rgba(132,48,48,.6); box-shadow:0 12px 35px rgba(0,0,0,.45); }
+        .detail-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+        .detail-back { border:1px solid #753030; padding:11px 16px; color:#e2caca;
+            background:#211717; font-family:"Cinzel",serif; font-size:.72rem;
+            letter-spacing:1.5px; cursor:pointer; }
+        .detail-back:hover { background:#351919; }
 
         .archive-entry {
             display: grid;
@@ -816,6 +837,8 @@
                 padding: 24px;
             }
 
+            .archive-cover { width: 112px; height: 168px; margin-right: 16px; }
+
             .archive-entry {
                 grid-template-columns: 1fr;
                 gap: 5px;
@@ -986,6 +1009,7 @@
                     >
                         <div class="archive-number">001</div>
                         <div>
+                            <img class="archive-cover" src="covers/shades-of-obsidian.png" alt="Cover of Shades of Obsidian" loading="lazy">
                             <h3 class="archive-title">Shades of Obsidian</h3>
                             <span class="archive-genre">MAFIA • DARK FICTION</span>
                             <span class="mature-tag">MATURE THEMES</span>
@@ -1000,7 +1024,7 @@
                             </p>
 
                             <button class="read-more" onclick="openModal('modal1')">
-                                READ MORE
+                                VIEW BOOK
                             </button>
                         </div>
                     </article>
@@ -1013,6 +1037,7 @@
                     >
                         <div class="archive-number">002</div>
                         <div>
+                            <img class="archive-cover" src="covers/i-belong-to-you.png" alt="Cover of I Belong to You" loading="lazy">
                             <h3 class="archive-title">I Belong to You</h3>
                             <span class="archive-genre">MAFIA • ROMANCE • DRAMA</span>
                             <span class="mature-tag">MATURE THEMES</span>
@@ -1026,7 +1051,7 @@
                             </p>
 
                             <button class="read-more" onclick="openModal('modal2')">
-                                READ MORE
+                                VIEW BOOK
                             </button>
                         </div>
                     </article>
@@ -1039,6 +1064,7 @@
                     >
                         <div class="archive-number">003</div>
                         <div>
+                            <img class="archive-cover" src="covers/the-mafia-beside-me.png" alt="Cover of The Mafia Beside Me" loading="lazy">
                             <h3 class="archive-title">The Mafia Beside Me</h3>
                             <span class="archive-genre">MAFIA • MYSTERY • DRAMA</span>
                             <span class="mature-tag">MATURE THEMES</span>
@@ -1053,7 +1079,7 @@
                             </p>
 
                             <button class="read-more" onclick="openModal('modal3')">
-                                READ MORE
+                                VIEW BOOK
                             </button>
                         </div>
                     </article>
@@ -1066,6 +1092,7 @@
                     >
                         <div class="archive-number">004</div>
                         <div>
+                            <img class="archive-cover" src="covers/what-are-we.jpg" alt="Cover of What Are We?" loading="lazy">
                             <h3 class="archive-title">What Are We?</h3>
                             <span class="archive-genre">GOTH • PUNK • DRAMA</span>
                             <span class="mature-tag">MATURE THEMES</span>
@@ -1080,7 +1107,7 @@
                             </p>
 
                             <button class="read-more" onclick="openModal('modal4')">
-                                READ MORE
+                                VIEW BOOK
                             </button>
                         </div>
                     </article>
@@ -1093,6 +1120,7 @@
                     >
                         <div class="archive-number">005</div>
                         <div>
+                            <img class="archive-cover" src="covers/be-mine.jpg" alt="Cover of Be Mine" loading="lazy">
                             <h3 class="archive-title">Be Mine</h3>
                             <span class="archive-genre">DRAMA • MYSTERY • ROMANCE</span>
                             <span class="mature-tag">MATURE THEMES</span>
@@ -1107,7 +1135,7 @@
                             </p>
 
                             <button class="read-more" onclick="openModal('modal5')">
-                                READ MORE
+                                VIEW BOOK
                             </button>
                         </div>
                     </article>
@@ -1120,6 +1148,7 @@
                     >
                         <div class="archive-number">006</div>
                         <div>
+                            <img class="archive-cover" src="covers/just-best-friends-forever.jpg" alt="Cover of (Just) Best Friends Forever" loading="lazy">
                             <h3 class="archive-title">(Just) Best Friends Forever</h3>
                             <span class="archive-genre">
                                 FRIENDS TO LOVERS • DRAMA • FANTASY
@@ -1136,7 +1165,7 @@
                             </p>
 
                             <button class="read-more" onclick="openModal('modal6')">
-                                READ MORE
+                                VIEW BOOK
                             </button>
                         </div>
                     </article>
@@ -1157,6 +1186,7 @@
                         aria-label="Close description">&times;</button>
                 <p class="modal-number">MANUSCRIPT 001</p>
                 <h3 id="modalTitle1">Shades of Obsidian</h3>
+                <img class="detail-cover" src="covers/shades-of-obsidian.png" alt="Cover of Shades of Obsidian">
                 <span class="archive-genre">MAFIA • DARK FICTION</span>
                 <span class="mature-tag">MATURE THEMES</span>
 
@@ -1173,7 +1203,8 @@
 
                     <p>And some people have a way of finding exactly what you're trying to hide.</p>
                 </div>
-            </div>
+            <div class="detail-actions"><button class="detail-back" onclick="closeModal('modal1'); document.getElementById('library').scrollIntoView({behavior:'smooth'});">RETURN TO LIBRARY</button></div>
+                </div>
         </div>
 
         <div class="modal" id="modal2" role="dialog" aria-modal="true"
@@ -1183,6 +1214,7 @@
                         aria-label="Close description">&times;</button>
                 <p class="modal-number">MANUSCRIPT 002</p>
                 <h3 id="modalTitle2">I Belong to You</h3>
+                <img class="detail-cover" src="covers/i-belong-to-you.png" alt="Cover of I Belong to You">
                 <span class="archive-genre">MAFIA • ROMANCE • DRAMA</span>
                 <span class="mature-tag">MATURE THEMES</span>
 
@@ -1199,7 +1231,8 @@
 
                     <p>Because when a man accustomed to possessing everything decides that she belongs to him, walking away may no longer be an option.</p>
                 </div>
-            </div>
+            <div class="detail-actions"><button class="detail-back" onclick="closeModal('modal2'); document.getElementById('library').scrollIntoView({behavior:'smooth'});">RETURN TO LIBRARY</button></div>
+                </div>
         </div>
 
         <div class="modal" id="modal3" role="dialog" aria-modal="true"
@@ -1209,6 +1242,7 @@
                         aria-label="Close description">&times;</button>
                 <p class="modal-number">MANUSCRIPT 003</p>
                 <h3 id="modalTitle3">The Mafia Beside Me</h3>
+                <img class="detail-cover" src="covers/the-mafia-beside-me.png" alt="Cover of The Mafia Beside Me">
                 <span class="archive-genre">MAFIA • MYSTERY • DRAMA</span>
                 <span class="mature-tag">MATURE THEMES</span>
 
@@ -1233,7 +1267,8 @@
 
                     <p>And suddenly, the person she thought was simply standing beside her... has been living an entirely different life.</p>
                 </div>
-            </div>
+            <div class="detail-actions"><button class="detail-back" onclick="closeModal('modal3'); document.getElementById('library').scrollIntoView({behavior:'smooth'});">RETURN TO LIBRARY</button></div>
+                </div>
         </div>
 
         <div class="modal" id="modal4" role="dialog" aria-modal="true"
@@ -1243,6 +1278,7 @@
                         aria-label="Close description">&times;</button>
                 <p class="modal-number">MANUSCRIPT 004</p>
                 <h3 id="modalTitle4">What Are We?</h3>
+                <img class="detail-cover" src="covers/what-are-we.jpg" alt="Cover of What Are We?">
                 <span class="archive-genre">GOTH • PUNK • DRAMA</span>
                 <span class="mature-tag">MATURE THEMES</span>
 
@@ -1279,7 +1315,8 @@
 
                     <p>Or just another secret waiting to tear the whole circle apart?</p>
                 </div>
-            </div>
+            <div class="detail-actions"><button class="detail-back" onclick="closeModal('modal4'); document.getElementById('library').scrollIntoView({behavior:'smooth'});">RETURN TO LIBRARY</button></div>
+                </div>
         </div>
 
         <div class="modal" id="modal5" role="dialog" aria-modal="true"
@@ -1289,6 +1326,7 @@
                         aria-label="Close description">&times;</button>
                 <p class="modal-number">MANUSCRIPT 005</p>
                 <h3 id="modalTitle5">Be Mine</h3>
+                <img class="detail-cover" src="covers/be-mine.jpg" alt="Cover of Be Mine">
                 <span class="archive-genre">DRAMA • MYSTERY • ROMANCE</span>
                 <span class="mature-tag">MATURE THEMES</span>
 
@@ -1325,7 +1363,8 @@
 
                     <p><strong>Be Mine.</strong></p>
                 </div>
-            </div>
+            <div class="detail-actions"><button class="detail-back" onclick="closeModal('modal5'); document.getElementById('library').scrollIntoView({behavior:'smooth'});">RETURN TO LIBRARY</button></div>
+                </div>
         </div>
 
         <div class="modal" id="modal6" role="dialog" aria-modal="true"
@@ -1335,6 +1374,7 @@
                         aria-label="Close description">&times;</button>
                 <p class="modal-number">MANUSCRIPT 006</p>
                 <h3 id="modalTitle6">(Just) Best Friends Forever</h3>
+                <img class="detail-cover" src="covers/just-best-friends-forever.jpg" alt="Cover of (Just) Best Friends Forever">
                 <span class="archive-genre">FRIENDS TO LOVERS • DRAMA • FANTASY</span>
                 <span class="mature-tag">MATURE THEMES</span>
 
@@ -1371,7 +1411,8 @@
 
                     <p>And maybe being best friends forever was never supposed to mean they would remain just friends.</p>
                 </div>
-            </div>
+            <div class="detail-actions"><button class="detail-back" onclick="closeModal('modal6'); document.getElementById('library').scrollIntoView({behavior:'smooth'});">RETURN TO LIBRARY</button></div>
+                </div>
         </div>
 
         <!-- Poetry Wing -->
@@ -1387,6 +1428,14 @@
                 <div class="poetry-panel">
                     <div class="poetry-symbol" aria-hidden="true">✧</div>
                     <h3>THE POET'S CORNER</h3>
+
+                    <a class="poetry-cover-link" href="#fragments-of-me" onclick="openModal('poetryModal'); return false;" aria-label="Open Fragments of Me poetry collection">
+                        <img class="poetry-cover" src="covers/fragments-of-me.png" alt="Fragments of Me poetry collection cover by BK FUTURE" loading="lazy">
+                    </a>
+                    <p class="archive-genre">POETRY COLLECTION • FRAGMENTS OF ME</p>
+                    <p>One book. Many poems. Pieces of thought, feeling, memory, and becoming—gathered in one place.</p>
+                    <button class="read-more" onclick="openModal('poetryModal')">EXPLORE THE COLLECTION</button>
+
 
                     <p>
                         Some feelings are too complicated for ordinary
@@ -1408,6 +1457,22 @@
                 </div>
             </div>
         </section>
+
+        <div class="modal" id="poetryModal" role="dialog" aria-modal="true" aria-labelledby="poetryModalTitle" onclick="closeOnBackdrop(event, 'poetryModal')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('poetryModal')" aria-label="Close collection details">&times;</button>
+                <p class="modal-number">POETRY COLLECTION 001</p>
+                <h3 id="poetryModalTitle">Fragments of Me</h3>
+                <p class="archive-genre">A POETRY COLLECTION BY BK FUTURE</p>
+                <img class="detail-cover" src="covers/fragments-of-me.png" alt="Fragments of Me poetry collection cover">
+                <div class="modal-description">
+                    <p><em>Fragments of Me</em> gathers the poems into one collection—a place for midnight thoughts, unspoken feelings, identity, love, loss, healing, darkness, and the small moments that leave a permanent mark.</p>
+                    <p>Each poem is a fragment; together, they form a record of everything words helped hold.</p>
+                    <p>More collection details and a reading link can be added here whenever you're ready.</p>
+                </div>
+                <div class="detail-actions"><button class="detail-back" onclick="closeModal('poetryModal'); document.getElementById('poetry').scrollIntoView({behavior:'smooth'});">RETURN TO POETRY WING</button></div>
+            </div>
+        </div>
 
         <!-- Sound Chamber -->
         <section class="section" id="sound">
@@ -1438,7 +1503,7 @@
 
                             <div class="song-actions">
                                 <button onclick="openModal('songModal1')">
-                                    READ MORE
+                                    VIEW BOOK
                                 </button>
                                 <a href="https://open.spotify.com/search/Shameless%20Camila%20Cabello"
                                    target="_blank" rel="noopener noreferrer">
@@ -1464,7 +1529,7 @@
 
                             <div class="song-actions">
                                 <button onclick="openModal('songModal2')">
-                                    READ MORE
+                                    VIEW BOOK
                                 </button>
                                 <a href="https://open.spotify.com/search/I%20See%20Red%20Everybody%20Loves%20an%20Outlaw"
                                    target="_blank" rel="noopener noreferrer">
@@ -1490,7 +1555,7 @@
 
                             <div class="song-actions">
                                 <button onclick="openModal('songModal3')">
-                                    READ MORE
+                                    VIEW BOOK
                                 </button>
                                 <a href="https://open.spotify.com/search/Renegade%20Aaryan%20Shah"
                                    target="_blank" rel="noopener noreferrer">
@@ -1638,17 +1703,17 @@
 
                 <div class="contact-links">
                     <!-- Replace these example links with your real profiles. -->
-                    <a href="https://www.instagram.com/"
+                    <a href="https://www.instagram.com/bk_thefuture79"
                        target="_blank" rel="noopener noreferrer">
                         INSTAGRAM ↗
                     </a>
 
-                    <a href="https://www.wattpad.com/"
+                    <a href="https://www.wattpad.com/BK08FUTURE"
                        target="_blank" rel="noopener noreferrer">
                         WATTPAD ↗
                     </a>
 
-                    <a href="https://www.tiktok.com/"
+                    <a href="https://www.tiktok.com/@.tomboyy_bookgirl"
                        target="_blank" rel="noopener noreferrer">
                         TIKTOK ↗
                     </a>
