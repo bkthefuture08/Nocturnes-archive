@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Search Console verification -->
+    <meta name="google-site-verification" content="Ft9DFhja6WU9derzeo0zV_FXVBEqnosRe3Z8cuwRCh0" />
+
+    <!-- Website information -->
+    <title>Nocturne's Archive | BK FUTURE</title>
+    <meta name="description" content="Explore Nocturne’s Archive by BK FUTURE, featuring dark fiction, mafia stories, romance, poetry, and haunting tales where secrets, shadows, and imagination collide.">
+    <meta name="author" content="BK FUTURE">
+    <meta name="theme-color" content="#0b0b0b">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #0b0b0b;
+            --charcoal: #111111;
+            --dark-section: #151515;
+            --card: #1b1b1b;
+            --card-hover: #202020;
+            --red: #8f1515;
+            --bright-red: #b52323;
+            --deep-red: #4d0c0c;
+            --white: #eeeeee;
+            --soft-white: #d7d0d0;
+            --muted: #aaa0a0;
+            --border: #4b1b1b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            background:
+                radial-gradient(
+                    ellipse at 15% 10%,
+                    rgba(100, 10, 10, 0.20),
+                    transparent 42%
+                ),
+                radial-gradient(
+                    ellipse at 90% 45%,
+                    rgba(75, 10, 10, 0.13),
+                    transparent 38%
+                ),
+                linear-gradient(
+                    135deg,
+                    #111111 0%,
+                    #0b0b0b 48%,
+                    #171010 100%
+                );
+            background-attachment: fixed;
+            color: var(--white);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 18px;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button:focus-visible,
+        a:focus-visible,
+        input:focus-visible {
+            outline: 2px solid var(--bright-red);
+            outline-offset: 4px;
+        }
+
+        ::selection {
+            background: var(--red);
+            color: white;
+        }
+
+        .container {
+            width: min(1080px, 90%);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 100px 0;
+            scroll-margin-top: 75px;
+        }
+
+        .section:nth-of-type(even) {
+            background: rgba(15, 15, 15, 0.48);
+        }
+
+        .section-heading {
+            margin-bottom: 14px;
+            color: var(--white);
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.65rem, 4vw, 2.5rem);
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            max-width: 680px;
+            margin: 0 auto 42px;
+            color: var(--muted);
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        .eyebrow {
+            color: #c17c7c;
+            font-family: "Cinzel", serif;
+            font-size: 0.73rem;
+            letter-spacing: 4px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .red-line {
+            width: 75px;
+            height: 2px;
+            margin: 22px auto;
+            background: var(--bright-red);
+        }
+
+        .accent {
+            color: #c94a4a;
+        }
+
+        /* Navigation */
+
+        .navbar {
+            position: sticky;
+            z-index: 100;
+            top: 0;
+            border-bottom: 1px solid rgba(143, 21, 21, 0.45);
+            background: rgba(10, 10, 10, 0.96);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-inner {
+            display: flex;
+            min-height: 72px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+        }
+
+        .brand {
+            flex-shrink: 0;
+            color: var(--white);
+            font-family: "Cinzel", serif;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+        }
+
+        .brand span {
+            color: var(--bright-red);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 18px;
+        }
+
+        .nav-links a {
+            color: var(--soft-white);
+            font-family: "Cinzel", serif;
+            font-size: 0.66rem;
+            letter-spacing: 1.3px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #e05a5a;
+        }
+
+        /* Hero */
+
+        .hero {
+            position: relative;
+            display: flex;
+            min-height: 86vh;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    ellipse at center,
+                    rgba(100, 12, 12, 0.20),
+                    transparent 65%
+                );
+            content: "";
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+        }
+
+        .moon {
+            display: block;
+            margin-bottom: 22px;
+            color: #c9a4a4;
+            font-size: 2.8rem;
+        }
+
+        .hero h1 {
+            margin-bottom: 15px;
+            font-family: "UnifrakturCook", cursive;
+            font-size: clamp(3.3rem, 9vw, 6.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            text-shadow: 0 0 35px rgba(143, 21, 21, 0.28);
+        }
+
+        .hero-subtitle {
+            color: #d5b5b5;
+            font-family: "Cinzel", serif;
+            font-size: clamp(0.8rem, 2.5vw, 1.05rem);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .hero-description {
+            max-width: 610px;
+            margin: 26px auto 34px;
+            color: var(--soft-white);
+            font-size: 1.2rem;
+        }
+
+        .outline-link {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--red);
+            color: var(--white);
+            font-family: "Cinzel", serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            transition:
+                background 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .outline-link:hover {
+            transform: translateY(-2px);
+            border-color: var(--bright-red);
+            background: rgba(143, 21, 21, 0.18);
+        }
+
+        /* About */
+
+        .about-box {
+            max-width: 790px;
+            margin: 0 auto;
+            padding: 36px;
+            border-left: 2px solid var(--red);
+            background: rgba(24, 24, 24, 0.72);
+        }
+
+        .about-box p {
+            margin-bottom: 18px;
+            color: var(--soft-white);
+        }
+
+        .about-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Archive / book list */
+
+        .archive-notice {
+            margin-bottom: 34px;
+            padding: 16px 20px;
+            border: 1px solid rgba(143, 21, 21, 0.35);
+            background: rgba(40, 12, 12, 0.23);
+            color: #c9bcbc;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .archive-notice strong {
+            color: #dfb5b5;
+            font-weight: 600;
+        }
+
+        .search-wrap {
+            max-width: 640px;
+            margin: 0 auto 42px;
+        }
+
+        .search-wrap label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-family: "Cinzel", serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 17px;
+            border: 1px solid var(--border);
+            border-radius: 0;
+            background: rgba(22, 22, 22, 0.94);
+            color: var(--white);
+        }
+
+        .search-input::placeholder {
+            color: #817878;
+        }
+
+        .archive-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .archive-entry {
+            display: grid;
+            grid-template-columns: 74px minmax(0, 1fr);
+            gap: 24px;
+            padding: 26px;
+            border: 1px solid rgba(110, 42, 42, 0.5);
+            background: linear-gradient(
+                110deg,
+                rgba(29, 29, 29, 0.96),
+                rgba(18, 18, 18, 0.96)
+            );
+            transition:
+                border-color 0.25s ease,
+                background 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .archive-entry:hover {
+            transform: translateY(-2px);
+            border-color: #853131;
+            background: var(--card-hover);
+        }
+
+        .archive-number {
+            padding-top: 4px;
+            color: #9d4141;
+            font-family: "Cinzel", serif;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+
+        .archive-title {
+            margin-bottom: 4px;
+            color: var(--white);
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.1rem, 3vw, 1.45rem);
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 1.45;
+        }
+
+        .archive-genre {
+            display: block;
+            margin-bottom: 12px;
+            color: #c47b7b;
+            font-family: "Cinzel", serif;
+            font-size: 0.64rem;
+            letter-spacing: 1.5px;
+        }
+
+        .mature-tag {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 3px 8px;
+            border: 1px solid #5c2929;
+            color: #bdaaaa;
+            font-family: "Cinzel", serif;
+            font-size: 0.6rem;
+            letter-spacing: 1.5px;
+        }
+
+        .archive-teaser {
+            margin-bottom: 17px;
+            color: #c9c1c1;
+            font-size: 1.08rem;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            padding: 9px 16px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: #e1caca;
+            cursor: pointer;
+            font-family: "Cinzel", serif;
+            font-size: 0.68rem;
+            letter-spacing: 1.6px;
+            transition: background 0.2s ease;
+        }
+
+        .read-more:hover {
+            background: rgba(143, 21, 21, 0.25);
+        }
+
+        .no-results {
+            padding: 28px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        /* Modals */
+
+        .modal {
+            position: fixed;
+            z-index: 500;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 22px;
+            background: rgba(0, 0, 0, 0.86);
+            backdrop-filter: blur(7px);
+        }
+
+        .modal.open {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            width: min(700px, 100%);
+            max-height: 85vh;
+            padding: clamp(25px, 5vw, 44px);
+            border: 1px solid #702626;
+            background: #151313;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+            overflow-y: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 17px;
+            border: none;
+            background: transparent;
+            color: #d7a0a0;
+            cursor: pointer;
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .modal-number {
+            margin-bottom: 8px;
+            color: #bd6868;
+            font-family: "Cinzel", serif;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+        }
+
+        .modal-content h3 {
+            margin: 0 28px 12px 0;
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.45rem, 4vw, 2rem);
+            font-weight: 500;
+            line-height: 1.35;
+        }
+
+        .modal-content .archive-genre {
+            margin-bottom: 8px;
+        }
+
+        .modal-description {
+            margin-top: 18px;
+            color: #d5cccc;
+            white-space: pre-line;
+        }
+
+        .modal-description p {
+            margin-bottom: 16px;
+        }
+
+        .modal-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Poetry */
+
+        .poetry-panel {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 38px;
+            border: 1px solid rgba(110, 42, 42, 0.45);
+            background: rgba(23, 23, 23, 0.8);
+            text-align: center;
+        }
+
+        .poetry-symbol {
+            margin-bottom: 14px;
+            color: #b34b4b;
+            font-size: 2rem;
+        }
+
+        .poetry-panel h3 {
+            margin-bottom: 12px;
+            font-family: "Cinzel", serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .poetry-panel p {
+            color: var(--soft-white);
+        }
+
+        .poetry-note {
+            margin-top: 20px;
+            color: #b98686 !important;
+            font-style: italic;
+        }
+
+        /* Sound Chamber */
+
+        .song-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .song-entry {
+            display: grid;
+            grid-template-columns: 62px minmax(0, 1fr);
+            gap: 22px;
+            padding: 25px;
+            border: 1px solid rgba(110, 42, 42, 0.45);
+            background: rgba(25, 25, 25, 0.9);
+        }
+
+        .song-number {
+            color: #9d4141;
+            font-family: "Cinzel", serif;
+            font-size: 1.2rem;
+        }
+
+        .song-entry h3 {
+            margin-bottom: 3px;
+            font-family: "Cinzel", serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .song-artist {
+            margin-bottom: 8px;
+            color: #d4aaaa;
+            font-size: 1rem;
+        }
+
+        .song-genre {
+            margin-bottom: 10px;
+            color: #c47b7b;
+            font-family: "Cinzel", serif;
+            font-size: 0.62rem;
+            letter-spacing: 1.3px;
+        }
+
+        .song-teaser {
+            margin-bottom: 15px;
+            color: #c9c1c1;
+        }
+
+        .song-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .song-actions button,
+        .song-actions a {
+            display: inline-block;
+            padding: 8px 13px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: #e1caca;
+            cursor: pointer;
+            font-family: "Cinzel", serif;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+        }
+
+        .song-actions button:hover,
+        .song-actions a:hover {
+            background: rgba(143, 21, 21, 0.25);
+        }
+
+        /* Creator */
+
+        .creator-card {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 42px;
+            border: 1px solid rgba(110, 42, 42, 0.45);
+            background: rgba(24, 24, 24, 0.8);
+            text-align: center;
+        }
+
+        .creator-mark {
+            margin-bottom: 10px;
+            color: #c05b5b;
+            font-size: 2.2rem;
+        }
+
+        .creator-card h3 {
+            margin-bottom: 6px;
+            font-family: "UnifrakturCook", cursive;
+            font-size: clamp(2.4rem, 6vw, 3.5rem);
+        }
+
+        .creator-role {
+            margin-bottom: 25px;
+            color: #c47b7b;
+            font-family: "Cinzel", serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+        }
+
+        .creator-card p {
+            margin-bottom: 16px;
+            color: var(--soft-white);
+        }
+
+        .creator-quote {
+            margin-top: 24px;
+            color: #d9aaaa !important;
+            font-size: 1.35rem;
+            font-style: italic;
+        }
+
+        /* Contact */
+
+        .contact-text {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: var(--soft-white);
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 13px;
+        }
+
+        .contact-links a {
+            min-width: 125px;
+            padding: 11px 16px;
+            border: 1px solid var(--border);
+            color: #dfcaca;
+            font-family: "Cinzel", serif;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-align: center;
+            transition: background 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            background: rgba(143, 21, 21, 0.22);
+        }
+
+        .contact-note {
+            margin-top: 24px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 34px 20px;
+            border-top: 1px solid rgba(143, 21, 21, 0.4);
+            background: rgba(8, 8, 8, 0.85);
+            text-align: center;
+        }
+
+        .footer-brand {
+            margin-bottom: 6px;
+            color: #d8baba;
+            font-family: "Cinzel", serif;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+        }
+
+        footer p {
+            color: #8e8383;
+            font-size: 0.92rem;
+        }
+
+        .footer-motto {
+            margin-top: 9px;
+            color: #ad6666;
+            font-family: "Cinzel", serif;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+        }
+
+        /* Responsive layout */
+
+        @media (max-width: 800px) {
+            .nav-inner {
+                flex-direction: column;
+                justify-content: center;
+                gap: 8px;
+                padding: 12px 0;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 10px 15px;
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .hero {
+                min-height: 76vh;
+            }
+
+            .archive-entry {
+                grid-template-columns: 48px minmax(0, 1fr);
+                gap: 15px;
+                padding: 21px;
+            }
+
+            .song-entry {
+                grid-template-columns: 42px minmax(0, 1fr);
+                gap: 14px;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            body {
+                font-size: 17px;
+            }
+
+            .container {
+                width: 91%;
+            }
+
+            .brand {
+                font-size: 0.85rem;
+            }
+
+            .nav-links {
+                gap: 7px 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.59rem;
+                letter-spacing: 0.8px;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 75px 15px;
+            }
+
+            .hero-subtitle {
+                letter-spacing: 2px;
+            }
+
+            .hero-description {
+                font-size: 1.08rem;
+            }
+
+            .about-box,
+            .poetry-panel,
+            .creator-card {
+                padding: 24px;
+            }
+
+            .archive-entry {
+                grid-template-columns: 1fr;
+                gap: 5px;
+                padding: 21px;
+            }
+
+            .archive-number {
+                font-size: 0.85rem;
+            }
+
+            .archive-title {
+                font-size: 1.18rem;
+            }
+
+            .song-entry {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .song-number {
+                font-size: 0.85rem;
+            }
+
+            .modal {
+                padding: 12px;
+            }
+
+            .modal-content {
+                max-height: 90vh;
+                padding: 26px 22px;
+            }
+
+            .contact-links {
+                gap: 9px;
+            }
+
+            .contact-links a {
+                min-width: 42%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="container nav-inner">
+            <a class="brand" href="#home">BK <span>FUTURE</span></a>
+
+            <div class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#library">LIBRARY</a>
+                <a href="#poetry">POETRY</a>
+                <a href="#sound">SOUND</a>
+                <a href="#creator">CREATOR</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <header class="hero" id="home">
+            <div class="hero-content">
+                <span class="moon" aria-hidden="true">☾</span>
+                <p class="eyebrow">A sanctuary for the written word</p>
+
+                <h1>Nocturne's Archive</h1>
+
+                <p class="hero-subtitle">The Literary World of BK FUTURE</p>
+
+                <div class="red-line"></div>
+
+                <p class="hero-description">
+                    A world of midnight thoughts, hidden secrets, haunting
+                    poetry, and fictional lives waiting to be discovered.
+                    Every story has a shadow. Every shadow has a story.
+                </p>
+
+                <a class="outline-link" href="#library">
+                    ENTER THE ARCHIVE ↓
+                </a>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+                <p class="eyebrow">Behind the pages</p>
+                <h2 class="section-heading">Welcome to the Archive</h2>
+                <div class="red-line"></div>
+
+                <div class="about-box">
+                    <p>
+                        Welcome to <span class="accent">Nocturne's Archive</span>,
+                        the literary world of BK FUTURE — a home for stories
+                        that explore the darker corners of imagination and
+                        the complicated nature of being human.
+                    </p>
+
+                    <p>
+                        Here, secrets have consequences, characters carry
+                        histories of their own, and not every question has
+                        an easy answer. From dangerous fictional worlds to
+                        quiet moments of reflection, every work has a place
+                        within the Archive.
+                    </p>
+
+                    <p>
+                        Browse the manuscripts, wander through the poetry,
+                        and discover the music behind the stories. There is
+                        always another page waiting to be turned.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Library -->
+        <section class="section" id="library">
+            <div class="container">
+                <p class="eyebrow">The written collection</p>
+                <h2 class="section-heading">The Manuscripts</h2>
+                <p class="section-subtitle">
+                    Six stories. Six different worlds. Countless secrets
+                    waiting between the lines.
+                </p>
+
+                <div class="archive-notice">
+                    <strong>Reader's notice:</strong>
+                    The works in this archive explore mature themes and
+                    darker subject matter. Reader discretion is advised.
+                </div>
+
+                <div class="search-wrap">
+                    <label for="bookSearch">Search the manuscripts</label>
+                    <input
+                        class="search-input"
+                        id="bookSearch"
+                        type="search"
+                        placeholder="Search by title, genre, or keyword..."
+                        autocomplete="off"
+                        aria-label="Search books by title, genre, or keyword"
+                    >
+                </div>
+
+                <div class="archive-list" id="archiveList">
+
+                    <!-- Book 001 -->
+                    <article
+                        class="archive-entry"
+                        data-title="Shades of Obsidian"
+                        data-genre="mafia dark fiction secrets heir"
+                    >
+                        <div class="archive-number">001</div>
+                        <div>
+                            <h3 class="archive-title">Shades of Obsidian</h3>
+                            <span class="archive-genre">MAFIA • DARK FICTION</span>
+                            <span class="mature-tag">MATURE THEMES</span>
+
+                            <p class="archive-teaser">
+                                She has spent years burying the secrets of
+                                her past, hiding every skeleton behind the
+                                carefully pressed uniform of an ordinary
+                                life. But when a certain Mafia heir walks
+                                into her world, everything she's worked to
+                                hide begins to surface...
+                            </p>
+
+                            <button class="read-more" onclick="openModal('modal1')">
+                                READ MORE
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Book 002 -->
+                    <article
+                        class="archive-entry"
+                        data-title="I Belong to You"
+                        data-genre="mafia romance drama powerful leader secrets"
+                    >
+                        <div class="archive-number">002</div>
+                        <div>
+                            <h3 class="archive-title">I Belong to You</h3>
+                            <span class="archive-genre">MAFIA • ROMANCE • DRAMA</span>
+                            <span class="mature-tag">MATURE THEMES</span>
+
+                            <p class="archive-teaser">
+                                She had a normal life. At least, she thought
+                                she did. Until a powerful Mafia leader walks
+                                into her world and takes an interest in the
+                                one person who was never supposed to become
+                                part of his...
+                            </p>
+
+                            <button class="read-more" onclick="openModal('modal2')">
+                                READ MORE
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Book 003 -->
+                    <article
+                        class="archive-entry"
+                        data-title="The Mafia Beside Me"
+                        data-genre="mafia mystery drama family foster care secrets"
+                    >
+                        <div class="archive-number">003</div>
+                        <div>
+                            <h3 class="archive-title">The Mafia Beside Me</h3>
+                            <span class="archive-genre">MAFIA • MYSTERY • DRAMA</span>
+                            <span class="mature-tag">MATURE THEMES</span>
+
+                            <p class="archive-teaser">
+                                She finally found the family she'd always
+                                wanted. But when the oldest sibling begins
+                                disappearing and becoming increasingly
+                                distant, she discovers that the person
+                                standing beside her has been hiding an
+                                entirely different life...
+                            </p>
+
+                            <button class="read-more" onclick="openModal('modal3')">
+                                READ MORE
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Book 004 -->
+                    <article
+                        class="archive-entry"
+                        data-title="What Are We?"
+                        data-genre="goth punk drama friendship jealousy secrets"
+                    >
+                        <div class="archive-number">004</div>
+                        <div>
+                            <h3 class="archive-title">What Are We?</h3>
+                            <span class="archive-genre">GOTH • PUNK • DRAMA</span>
+                            <span class="mature-tag">MATURE THEMES</span>
+
+                            <p class="archive-teaser">
+                                In their world, Goths and Punks don't mix.
+                                She's desperate to earn her place in the
+                                Goth club, but then she gets involved with
+                                a Punk—and discovers he's already tangled
+                                up with someone much closer to her than she
+                                ever expected...
+                            </p>
+
+                            <button class="read-more" onclick="openModal('modal4')">
+                                READ MORE
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Book 005 -->
+                    <article
+                        class="archive-entry"
+                        data-title="Be Mine"
+                        data-genre="drama mystery romance friendship grief guilt secrets"
+                    >
+                        <div class="archive-number">005</div>
+                        <div>
+                            <h3 class="archive-title">Be Mine</h3>
+                            <span class="archive-genre">DRAMA • MYSTERY • ROMANCE</span>
+                            <span class="mature-tag">MATURE THEMES</span>
+
+                            <p class="archive-teaser">
+                                They've been friends for as long as they can
+                                remember — one carrying everlasting grief,
+                                the other carrying the guilt behind it. But
+                                he has secrets she was never meant to
+                                discover, and whatever is done in the dark
+                                will eventually come to light...
+                            </p>
+
+                            <button class="read-more" onclick="openModal('modal5')">
+                                READ MORE
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Book 006 -->
+                    <article
+                        class="archive-entry"
+                        data-title="(Just) Best Friends Forever"
+                        data-genre="friends to lovers drama fantasy accidents tragedy regrets"
+                    >
+                        <div class="archive-number">006</div>
+                        <div>
+                            <h3 class="archive-title">(Just) Best Friends Forever</h3>
+                            <span class="archive-genre">
+                                FRIENDS TO LOVERS • DRAMA • FANTASY
+                            </span>
+                            <span class="mature-tag">MATURE THEMES</span>
+
+                            <p class="archive-teaser">
+                                They were supposed to be best friends forever.
+                                But between exes, accidents, regrets and
+                                tragedies, friendship slowly becomes
+                                something neither of them can ignore — and
+                                even when the worlds between them change,
+                                love keeps finding a way back...
+                            </p>
+
+                            <button class="read-more" onclick="openModal('modal6')">
+                                READ MORE
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="no-results" id="noResults" hidden>
+                    No stories were found in the archive.
+                </p>
+            </div>
+        </section>
+
+        <!-- Book Modals -->
+        <div class="modal" id="modal1" role="dialog" aria-modal="true"
+             aria-labelledby="modalTitle1" onclick="closeOnBackdrop(event, 'modal1')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('modal1')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">MANUSCRIPT 001</p>
+                <h3 id="modalTitle1">Shades of Obsidian</h3>
+                <span class="archive-genre">MAFIA • DARK FICTION</span>
+                <span class="mature-tag">MATURE THEMES</span>
+
+                <div class="modal-description">
+                    <p>She has spent years trying to bury the secrets that came with her past, hiding every skeleton behind the carefully pressed uniform of an ordinary life.</p>
+
+                    <p>For a while, it works.</p>
+
+                    <p>Until a certain Mafia heir walks into her world.</p>
+
+                    <p>What begins as an unexpected intrusion threatens to unravel the life she's worked so hard to construct, forcing old secrets back into the light and bringing her dangerously close to a world she thought she'd left behind.</p>
+
+                    <p>Because some secrets refuse to stay buried.</p>
+
+                    <p>And some people have a way of finding exactly what you're trying to hide.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal2" role="dialog" aria-modal="true"
+             aria-labelledby="modalTitle2" onclick="closeOnBackdrop(event, 'modal2')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('modal2')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">MANUSCRIPT 002</p>
+                <h3 id="modalTitle2">I Belong to You</h3>
+                <span class="archive-genre">MAFIA • ROMANCE • DRAMA</span>
+                <span class="mature-tag">MATURE THEMES</span>
+
+                <div class="modal-description">
+                    <p>She had a normal life. At least, she thought she did.</p>
+
+                    <p>Unlike her cousin, whose life had already become entangled with a dangerous world, she had managed to remain far from it—living quietly, loving quietly, and believing that her future belonged entirely to her.</p>
+
+                    <p>Until a Mafia leader walks into her life.</p>
+
+                    <p>Powerful. Ruthless. Untouchable. And far too interested in her.</p>
+
+                    <p>He belongs to a world she was never meant to enter, while she is the last person he should ever want. Yet somehow, their paths become impossible to separate.</p>
+
+                    <p>Because when a man accustomed to possessing everything decides that she belongs to him, walking away may no longer be an option.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal3" role="dialog" aria-modal="true"
+             aria-labelledby="modalTitle3" onclick="closeOnBackdrop(event, 'modal3')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('modal3')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">MANUSCRIPT 003</p>
+                <h3 id="modalTitle3">The Mafia Beside Me</h3>
+                <span class="archive-genre">MAFIA • MYSTERY • DRAMA</span>
+                <span class="mature-tag">MATURE THEMES</span>
+
+                <div class="modal-description">
+                    <p>She was the girl who found a family when she needed one most.</p>
+
+                    <p>Welcomed into the home of three siblings after growing up in foster care, she slowly became part of something she had never truly believed she could have—a family.</p>
+
+                    <p>The youngest becomes her responsibility.</p>
+
+                    <p>The oldest becomes something far more complicated.</p>
+
+                    <p>A brother. A best friend. A secret she refuses to name.</p>
+
+                    <p>But lately, the oldest has become increasingly distant. Always busy. Always somewhere else. Always unavailable whenever she needs him most.</p>
+
+                    <p>She tells herself there is a reasonable explanation.</p>
+
+                    <p>There isn't.</p>
+
+                    <p>When she finally discovers where he's been—and what he's been involved in—the truth is far darker than anything she could have imagined.</p>
+
+                    <p>And suddenly, the person she thought was simply standing beside her... has been living an entirely different life.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal4" role="dialog" aria-modal="true"
+             aria-labelledby="modalTitle4" onclick="closeOnBackdrop(event, 'modal4')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('modal4')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">MANUSCRIPT 004</p>
+                <h3 id="modalTitle4">What Are We?</h3>
+                <span class="archive-genre">GOTH • PUNK • DRAMA</span>
+                <span class="mature-tag">MATURE THEMES</span>
+
+                <div class="modal-description">
+                    <p>In their world, Goths and Punks don't mix.</p>
+
+                    <p>The rules are simple. The lines are drawn. And if you're a Goth, you stay with the Goths.</p>
+
+                    <p>She has spent years trying to earn her place among them. As a Raven chick, she's considered too inexperienced to be part of the inner circle—a position that comes with respect, belonging, and a voice within the Goth community. But she's determined to prove that she's more than the label they've given her.</p>
+
+                    <p>Getting accepted into the Goth club would mean finally being seen as one of them.</p>
+
+                    <p>So she's willing to do whatever it takes.</p>
+
+                    <p>Then she meets him.</p>
+
+                    <p>A Punk. The one person she knows she shouldn't be drawn to.</p>
+
+                    <p>What begins as a complicated relationship quickly becomes something neither of them can neatly define. Because the more she tries to figure out what they are, the more complicated everything becomes.</p>
+
+                    <p>Especially when she discovers that he's already tangled up with someone else.</p>
+
+                    <p>Someone she knows.</p>
+
+                    <p>Her best friend.</p>
+
+                    <p>A Goth just like her.</p>
+
+                    <p>In a world where choosing sides matters, falling for the wrong person could cost her the very acceptance she's spent years chasing.</p>
+
+                    <p>So what are they?</p>
+
+                    <p>Friends? A mistake? Something more?</p>
+
+                    <p>Or just another secret waiting to tear the whole circle apart?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal5" role="dialog" aria-modal="true"
+             aria-labelledby="modalTitle5" onclick="closeOnBackdrop(event, 'modal5')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('modal5')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">MANUSCRIPT 005</p>
+                <h3 id="modalTitle5">Be Mine</h3>
+                <span class="archive-genre">DRAMA • MYSTERY • ROMANCE</span>
+                <span class="mature-tag">MATURE THEMES</span>
+
+                <div class="modal-description">
+                    <p>They've been friends for as long as either of them can remember.</p>
+
+                    <p>Two people who grew up side by side, carrying completely different kinds of pain.</p>
+
+                    <p>She lives with an everlasting grief she has never quite learned how to put down.</p>
+
+                    <p>He lives with the guilt of knowing he is somehow connected to it.</p>
+
+                    <p>She has hopes for the future. A life she still wants to build despite everything she's lost.</p>
+
+                    <p>He has secrets.</p>
+
+                    <p>Secrets buried deep enough that he convinces himself they can stay there forever. Secrets she was never supposed to discover.</p>
+
+                    <p>But secrets have a way of surfacing.</p>
+
+                    <p>And whatever is done in the dark will eventually come into the light.</p>
+
+                    <p>As the years of friendship begin to collide with feelings neither of them can ignore, the line between what they know about each other and what they've been hiding becomes dangerously thin.</p>
+
+                    <p>Then one secret changes everything.</p>
+
+                    <p>With every revelation comes another question. Every answer opens another wound. And the closer they get to the truth, the more they risk destroying the very bond that has kept them together for years.</p>
+
+                    <p>Because sometimes the person who knows you best is also the person who has the most to hide.</p>
+
+                    <p>And when the darkness finally comes to light...</p>
+
+                    <p>will there be anything left to hold onto?</p>
+
+                    <p><strong>Be Mine.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal6" role="dialog" aria-modal="true"
+             aria-labelledby="modalTitle6" onclick="closeOnBackdrop(event, 'modal6')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('modal6')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">MANUSCRIPT 006</p>
+                <h3 id="modalTitle6">(Just) Best Friends Forever</h3>
+                <span class="archive-genre">FRIENDS TO LOVERS • DRAMA • FANTASY</span>
+                <span class="mature-tag">MATURE THEMES</span>
+
+                <div class="modal-description">
+                    <p>They were supposed to be best friends forever.</p>
+
+                    <p>Nothing more.</p>
+
+                    <p>At least, that's what they told themselves.</p>
+
+                    <p>They grew up together, shared everything, and somehow always found their way back to each other—even when life gave them every reason not to.</p>
+
+                    <p>But forever has never been as simple as it sounds.</p>
+
+                    <p>There are exes who refuse to stay in the past, accidents that change everything, regrets that cannot be undone, and tragedies that leave scars neither of them knows how to carry.</p>
+
+                    <p>Somewhere along the way, friendship becomes something neither of them can name without risking everything they've built.</p>
+
+                    <p>And just when they think they've finally figured out where they stand, life pulls the ground from beneath them again.</p>
+
+                    <p>Because sometimes love arrives too early.</p>
+
+                    <p>Sometimes it arrives too late.</p>
+
+                    <p>And sometimes, no matter how many times the world tries to separate two people, they keep finding their way back to one another.</p>
+
+                    <p>Across distance.</p>
+
+                    <p>Across time.</p>
+
+                    <p>Across worlds.</p>
+
+                    <p>Because some connections were never meant to end.</p>
+
+                    <p>And maybe being best friends forever was never supposed to mean they would remain just friends.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Poetry Wing -->
+        <section class="section" id="poetry">
+            <div class="container">
+                <p class="eyebrow">Words after midnight</p>
+                <h2 class="section-heading">The Poetry Wing</h2>
+                <p class="section-subtitle">
+                    Poems written in the spaces between midnight thoughts,
+                    unspoken feelings, and the things we struggle to name.
+                </p>
+
+                <div class="poetry-panel">
+                    <div class="poetry-symbol" aria-hidden="true">✧</div>
+                    <h3>THE POET'S CORNER</h3>
+
+                    <p>
+                        Some feelings are too complicated for ordinary
+                        conversation. Some thoughts only make sense when
+                        they become words on a page.
+                    </p>
+
+                    <p>
+                        This wing is dedicated to poetry about life,
+                        identity, love, loss, healing, darkness, and the
+                        small moments that leave a permanent mark.
+                    </p>
+
+                    <p class="poetry-note">
+                        "Not every silence is empty. Some are full of words."
+                    </p>
+
+                    <!-- Add individual poems here when you're ready. -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sound Chamber -->
+        <section class="section" id="sound">
+            <div class="container">
+                <p class="eyebrow">The archive has a soundtrack</p>
+                <h2 class="section-heading">The Sound Chamber</h2>
+                <p class="section-subtitle">
+                    Every story has a soundtrack. These are the songs
+                    that belong to the moods, characters, and shadows
+                    of Nocturne's Archive.
+                </p>
+
+                <div class="song-list">
+
+                    <!-- Song 001 -->
+                    <article class="song-entry">
+                        <div class="song-number">001</div>
+                        <div>
+                            <h3>Shameless</h3>
+                            <p class="song-artist">Camila Cabello</p>
+                            <p class="song-genre">DARK POP • OBSESSION • DESIRE</p>
+
+                            <p class="song-teaser">
+                                A song about wanting something you know you
+                                shouldn't, and finally being done with
+                                pretending otherwise...
+                            </p>
+
+                            <div class="song-actions">
+                                <button onclick="openModal('songModal1')">
+                                    READ MORE
+                                </button>
+                                <a href="https://open.spotify.com/search/Shameless%20Camila%20Cabello"
+                                   target="_blank" rel="noopener noreferrer">
+                                    FIND ON SPOTIFY ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Song 002 -->
+                    <article class="song-entry">
+                        <div class="song-number">002</div>
+                        <div>
+                            <h3>I See Red</h3>
+                            <p class="song-artist">Everybody Loves an Outlaw</p>
+                            <p class="song-genre">DARK COUNTRY • OBSESSION • RETRIBUTION</p>
+
+                            <p class="song-teaser">
+                                Love turns bitter, jealousy takes over, and
+                                the darkness begins to look a lot more
+                                dangerous than it did before...
+                            </p>
+
+                            <div class="song-actions">
+                                <button onclick="openModal('songModal2')">
+                                    READ MORE
+                                </button>
+                                <a href="https://open.spotify.com/search/I%20See%20Red%20Everybody%20Loves%20an%20Outlaw"
+                                   target="_blank" rel="noopener noreferrer">
+                                    FIND ON SPOTIFY ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Song 003 -->
+                    <article class="song-entry">
+                        <div class="song-number">003</div>
+                        <div>
+                            <h3>Renegade</h3>
+                            <p class="song-artist">Aaryan Shah</p>
+                            <p class="song-genre">DARK POP • REBELLION • INTENSITY</p>
+
+                            <p class="song-teaser">
+                                There's something intoxicating about
+                                becoming the person everyone warned you
+                                not to be...
+                            </p>
+
+                            <div class="song-actions">
+                                <button onclick="openModal('songModal3')">
+                                    READ MORE
+                                </button>
+                                <a href="https://open.spotify.com/search/Renegade%20Aaryan%20Shah"
+                                   target="_blank" rel="noopener noreferrer">
+                                    FIND ON SPOTIFY ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Song Modals -->
+        <div class="modal" id="songModal1" role="dialog" aria-modal="true"
+             aria-labelledby="songTitle1" onclick="closeOnBackdrop(event, 'songModal1')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('songModal1')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">SOUNDTRACK 001</p>
+                <h3 id="songTitle1">Shameless</h3>
+                <p class="song-artist">Camila Cabello</p>
+                <p class="song-genre">DARK POP • OBSESSION • DESIRE</p>
+
+                <div class="modal-description">
+                    <p>There is a certain kind of desire that becomes impossible to hide.</p>
+
+                    <p>Shameless belongs to that moment—the point where restraint starts to crumble and pretending not to care becomes more exhausting than admitting that you do.</p>
+
+                    <p>It carries the feeling of wanting something with your entire being, even when the consequences are complicated.</p>
+
+                    <p>A song for secret glances, dangerous honesty, midnight thoughts, and the moment when someone finally stops pretending they don't want what they want.</p>
+
+                    <p>Some feelings don't knock.</p>
+
+                    <p>They simply walk through the door.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="songModal2" role="dialog" aria-modal="true"
+             aria-labelledby="songTitle2" onclick="closeOnBackdrop(event, 'songModal2')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('songModal2')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">SOUNDTRACK 002</p>
+                <h3 id="songTitle2">I See Red</h3>
+                <p class="song-artist">Everybody Loves an Outlaw</p>
+                <p class="song-genre">DARK COUNTRY • OBSESSION • RETRIBUTION</p>
+
+                <div class="modal-description">
+                    <p>Not every love story stays soft.</p>
+
+                    <p>I See Red lives in the darker territory where affection, jealousy and anger begin to blur together.</p>
+
+                    <p>It feels like the soundtrack to a character standing on the edge of losing control—not because they stopped caring, but because their emotions have become impossible to ignore.</p>
+
+                    <p>The atmosphere is raw, possessive and unsettling.</p>
+
+                    <p>It belongs to the side of Nocturne's Archive where love isn't always beautiful, and emotions don't always arrive quietly.</p>
+
+                    <p>Sometimes the heart doesn't break.</p>
+
+                    <p>Sometimes it burns.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="songModal3" role="dialog" aria-modal="true"
+             aria-labelledby="songTitle3" onclick="closeOnBackdrop(event, 'songModal3')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('songModal3')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">SOUNDTRACK 003</p>
+                <h3 id="songTitle3">Renegade</h3>
+                <p class="song-artist">Aaryan Shah</p>
+                <p class="song-genre">DARK POP • REBELLION • INTENSITY</p>
+
+                <div class="modal-description">
+                    <p>Renegade feels like stepping outside the lines and refusing to apologise for what you find there.</p>
+
+                    <p>There is darkness in it, but also freedom—the feeling of becoming someone unpredictable, untouchable and impossible to fit neatly into the expectations of everyone around you.</p>
+
+                    <p>It belongs to characters who don't necessarily want to be saved.</p>
+
+                    <p>Characters who walk toward the forbidden door simply because someone told them not to open it.</p>
+
+                    <p>A soundtrack for rebellion, temptation, dangerous confidence, and the beautiful chaos of becoming your own kind of villain.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Creator's Study -->
+        <section class="section" id="creator">
+            <div class="container">
+                <p class="eyebrow">The mind behind the manuscripts</p>
+                <h2 class="section-heading">The Creator's Study</h2>
+                <p class="section-subtitle">
+                    Every fictional world begins somewhere.
+                    This is where the words find their way out.
+                </p>
+
+                <div class="creator-card">
+                    <div class="creator-mark" aria-hidden="true">☾</div>
+
+                    <h3>BK FUTURE</h3>
+
+                    <p class="creator-role">
+                        WRITER • DREAMER • WORLD-BUILDER
+                    </p>
+
+                    <p>
+                        A storyteller drawn to complicated characters,
+                        dark fictional worlds, unexpected truths, and
+                        the emotions that make a story linger.
+                    </p>
+
+                    <p>
+                        Nocturne's Archive is a growing collection of
+                        novels, poetry, and ideas shaped by imagination.
+                        Every manuscript holds a different world, and
+                        every world has something left to reveal.
+                    </p>
+
+                    <p class="creator-quote">
+                        "Every story begins as a thought that refuses to leave."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="container">
+                <p class="eyebrow">Leave a message in the dark</p>
+                <h2 class="section-heading">Contact the Archive</h2>
+
+                <div class="red-line"></div>
+
+                <p class="contact-text">
+                    Want to follow the stories, discover new writing,
+                    or keep up with the creator? Find BK FUTURE through
+                    the links below.
+                </p>
+
+                <div class="contact-links">
+                    <!-- Replace these example links with your real profiles. -->
+                    <a href="https://www.instagram.com/"
+                       target="_blank" rel="noopener noreferrer">
+                        INSTAGRAM ↗
+                    </a>
+
+                    <a href="https://www.wattpad.com/"
+                       target="_blank" rel="noopener noreferrer">
+                        WATTPAD ↗
+                    </a>
+
+                    <a href="https://www.tiktok.com/"
+                       target="_blank" rel="noopener noreferrer">
+                        TIKTOK ↗
+                    </a>
+
+                    <!-- Replace the placeholder with your real email address. -->
+                    <a href="mailto:your-email@example.com">
+                        EMAIL ↗
+                    </a>
+                </div>
+
+                <p class="contact-note">
+                    Some stories are shared in chapters. Others are
+                    written one midnight thought at a time.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-brand">NOCTURNE'S ARCHIVE • BK FUTURE</p>
+        <p>© 2026 BK FUTURE. All rights reserved.</p>
+        <p class="footer-motto">
+            ENTER THE STORIES. LEAVE REALITY AT THE DOOR.
+        </p>
+    </footer>
+
+    <script>
+        // Open a book or song description.
+        function openModal(id) {
+            const modal = document.getElementById(id);
+
+            if (!modal) return;
+
+            modal.classList.add("open");
+            document.body.style.overflow = "hidden";
+
+            const closeButton = modal.querySelector(".modal-close");
+
+            if (closeButton) {
+                closeButton.focus();
+            }
+        }
+
+        // Close a specific description.
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+
+            if (!modal) return;
+
+            modal.classList.remove("open");
+
+            const anyModalOpen = document.querySelector(".modal.open");
+
+            if (!anyModalOpen) {
+                document.body.style.overflow = "";
+            }
+        }
+
+        // Close a description by clicking the dark backdrop.
+        function closeOnBackdrop(event, id) {
+            if (event.target === event.currentTarget) {
+                closeModal(id);
+            }
+        }
+
+        // Escape closes any open modal.
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                document.querySelectorAll(".modal.open").forEach(function(modal) {
+                    modal.classList.remove("open");
+                });
+
+                document.body.style.overflow = "";
+            }
+        });
+
+        // Search the manuscript titles, genres, and descriptions.
+        const bookSearch = document.getElementById("bookSearch");
+        const archiveEntries = document.querySelectorAll(".archive-entry");
+        const noResults = document.getElementById("noResults");
+
+        function searchBooks() {
+            const query = bookSearch.value.trim().toLowerCase();
+            let visibleCount = 0;
+
+            archiveEntries.forEach(function(entry) {
+                const searchableText = (
+                    entry.innerText + " " +
+                    (entry.dataset.title || "") + " " +
+                    (entry.dataset.genre || "")
+                ).toLowerCase();
+
+                const matches = searchableText.includes(query);
+
+                entry.hidden = !matches;
+
+                if (matches) {
+                    visibleCount++;
+                }
+            });
+
+            noResults.hidden = visibleCount !== 0;
+        }
+
+        bookSearch.addEventListener("input", searchBooks);
+    </script>
+
+</body>
+</html>
