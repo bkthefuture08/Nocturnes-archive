@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Search Console verification -->
-    <meta name="google-site-verification" content="<meta name="google-site-verification" content="-IF7w72Ri2BwyHERIY7JdnJ8aAgEG17G0Kb_Ldhqfp8" />" />
+    <meta name="google-site-verification" content="Ft9DFhja6WU9derzeo0zV_FXVBEqnosRe3Z8cuwRCh0" />
 
     <!-- Website information -->
     <title>Nocturne's Archive | BK FUTURE</title>
@@ -366,6 +366,21 @@
         .detail-cover { display: block; width: min(240px, 70%); max-height: 420px;
             object-fit: contain; margin: 22px auto 28px; background: #080808;
             border: 1px solid rgba(132,48,48,.6); box-shadow: 0 12px 35px rgba(0,0,0,.45); }
+        .cover-placeholder {
+            display: flex; align-items: center; justify-content: center; flex-direction: column;
+            gap: 10px; text-align: center; color: #e8dddd;
+            background: radial-gradient(ellipse at 50% 40%, rgba(113, 28, 39, .35), transparent 58%),
+                        linear-gradient(145deg, #1b1b1b, #080808 70%);
+            border: 1px solid rgba(132, 48, 48, .65);
+            box-shadow: 0 12px 28px rgba(0,0,0,.38);
+            font-family: "Cinzel", serif; letter-spacing: 2px;
+        }
+        .archive-cover-placeholder { float:left; width:138px; height:207px; margin:0 24px 14px 0; }
+        .detail-cover-placeholder { width:min(240px,70%); aspect-ratio:2/3; margin:22px auto 28px; padding:18px; }
+        .cover-placeholder .cover-symbol { color:#b52323; font-size:2.2rem; line-height:1; }
+        .cover-placeholder .cover-title { font-size:.86rem; line-height:1.7; }
+        .cover-placeholder .cover-author { color:#a99a9a; font-size:.55rem; letter-spacing:3px; }
+        @media (max-width: 600px) { .archive-cover-placeholder { width:108px; height:162px; margin-right:16px; } }
         .poetry-cover-link { display:block; width:min(250px,100%); margin:24px auto; }
         .poetry-cover { width:100%; height:auto; display:block; object-fit:contain;
             border:1px solid rgba(132,48,48,.6); box-shadow:0 12px 35px rgba(0,0,0,.45); }
@@ -977,7 +992,7 @@
                 <p class="eyebrow">The written collection</p>
                 <h2 class="section-heading">The Manuscripts</h2>
                 <p class="section-subtitle">
-                    Six stories. Six different worlds. Countless secrets
+                    Seven stories. Seven different worlds. Countless secrets
                     waiting between the lines.
                 </p>
 
@@ -1165,6 +1180,34 @@
                             </p>
 
                             <button class="read-more" onclick="openModal('modal6')">
+                                VIEW BOOK
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Book 007 -->
+                    <article
+                        class="archive-entry"
+                        data-title="A Dove and a Raven"
+                        data-genre="fiction romance opposites attract friends to lovers destined love faith identity South Africa Los Angeles"
+                    >
+                        <div class="archive-number">007</div>
+                        <div>
+                            <img class="archive-cover" src="covers/a-dove-and-a-raven.png" alt="Cover of A Dove and a Raven by BK FUTURE" loading="lazy">
+                            <h3 class="archive-title">A Dove and a Raven</h3>
+                            <span class="archive-genre">FICTION • ROMANCE • OPPOSITES ATTRACT</span>
+                            <span class="archive-genre">FRIENDS TO LOVERS • DESTINED LOVE</span>
+
+                            <p class="archive-teaser">
+                                He was raised to be a dove. She was raised to be a raven.
+                                A pastor's son questioning everything he's ever known,
+                                and a goth girl carrying a legacy she never asked for.
+                                They were never supposed to meet—but perhaps some souls
+                                are destined to find each other, even when the worlds they
+                                come from tell them not to...
+                            </p>
+
+                            <button class="read-more" onclick="openModal('modal7')">
                                 VIEW BOOK
                             </button>
                         </div>
@@ -1413,6 +1456,36 @@
                 </div>
             <div class="detail-actions"><button class="detail-back" onclick="closeModal('modal6'); document.getElementById('library').scrollIntoView({behavior:'smooth'});">RETURN TO LIBRARY</button></div>
                 </div>
+        </div>
+
+        <!-- Book 007: A Dove and a Raven -->
+        <div class="modal" id="modal7" role="dialog" aria-modal="true"
+             aria-labelledby="modalTitle7" onclick="closeOnBackdrop(event, 'modal7')">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal('modal7')"
+                        aria-label="Close description">&times;</button>
+                <p class="modal-number">MANUSCRIPT 007</p>
+                <h3 id="modalTitle7">A Dove and a Raven</h3>
+                <img class="detail-cover" src="covers/a-dove-and-a-raven.png" alt="Cover of A Dove and a Raven by BK FUTURE">
+                <span class="archive-genre">FICTION • ROMANCE • OPPOSITES ATTRACT</span>
+                <span class="archive-genre">FRIENDS TO LOVERS • DESTINED LOVE</span>
+
+                <div class="modal-description">
+                    <p>He was raised to be a dove.</p>
+                    <p>She was raised to be a raven.</p>
+                    <p>Allan Joseph is nineteen, the pastor's son, and everything his parents expect him to be: kind, obedient, faithful, and good. But behind the sermons and perfect answers, Allan has questions he's never been brave enough to ask.</p>
+                    <p>Rune Roth is eighteen, a goth girl who would rather be left alone than explain herself. Born and raised in South Africa before moving to Los Angeles, she carries a family legacy she wants nothing to do with—and beliefs she's no longer sure belong to her anymore.</p>
+                    <p>They were never supposed to meet.</p>
+                    <p>A Christian pastor's son.</p>
+                    <p>A girl raised in a very different faith.</p>
+                    <p>Two people who have every reason to walk away from each other.</p>
+                    <p>But sometimes, the person who challenges everything you believe is the person who teaches you the most about yourself.</p>
+                    <p>Maybe Allan isn't as certain as he thought.</p>
+                    <p>Maybe Rune isn't as lost as everyone assumes.</p>
+                    <p>And maybe a dove and a raven aren't as different as they seem.</p>
+                </div>
+                <div class="detail-actions"><button class="detail-back" onclick="closeModal('modal7'); document.getElementById('library').scrollIntoView({behavior:'smooth'});">RETURN TO LIBRARY</button></div>
+            </div>
         </div>
 
         <!-- Poetry Wing -->
@@ -1703,17 +1776,17 @@
 
                 <div class="contact-links">
                     <!-- Replace these example links with your real profiles. -->
-                    <a href="https://www.instagram.com/bk_thefuture79"
+                    <a href="https://www.instagram.com/"
                        target="_blank" rel="noopener noreferrer">
                         INSTAGRAM ↗
                     </a>
 
-                    <a href="https://www.wattpad.com/BK08FUTURE"
+                    <a href="https://www.wattpad.com/"
                        target="_blank" rel="noopener noreferrer">
                         WATTPAD ↗
                     </a>
 
-                    <a href="https://www.tiktok.com/@.tomboyy_bookgirl"
+                    <a href="https://www.tiktok.com/"
                        target="_blank" rel="noopener noreferrer">
                         TIKTOK ↗
                     </a>
