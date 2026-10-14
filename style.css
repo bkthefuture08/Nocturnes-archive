@@ -1,0 +1,891 @@
+
+        :root {
+            --black: #0b0b0b;
+            --charcoal: #111111;
+            --dark-section: #151515;
+            --card: #1b1b1b;
+            --card-hover: #202020;
+            --red: #8f1515;
+            --bright-red: #b52323;
+            --deep-red: #4d0c0c;
+            --white: #eeeeee;
+            --soft-white: #d7d0d0;
+            --muted: #aaa0a0;
+            --border: #4b1b1b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            background:
+                radial-gradient(
+                    ellipse at 15% 10%,
+                    rgba(100, 10, 10, 0.20),
+                    transparent 42%
+                ),
+                radial-gradient(
+                    ellipse at 90% 45%,
+                    rgba(75, 10, 10, 0.13),
+                    transparent 38%
+                ),
+                linear-gradient(
+                    135deg,
+                    #111111 0%,
+                    #0b0b0b 48%,
+                    #171010 100%
+                );
+            background-attachment: fixed;
+            color: var(--white);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 18px;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button:focus-visible,
+        a:focus-visible,
+        input:focus-visible {
+            outline: 2px solid var(--bright-red);
+            outline-offset: 4px;
+        }
+
+        ::selection {
+            background: var(--red);
+            color: white;
+        }
+
+        .container {
+            width: min(1080px, 90%);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 100px 0;
+            scroll-margin-top: 75px;
+        }
+
+        .section:nth-of-type(even) {
+            background: rgba(15, 15, 15, 0.48);
+        }
+
+        .section-heading {
+            margin-bottom: 14px;
+            color: var(--white);
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.65rem, 4vw, 2.5rem);
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            max-width: 680px;
+            margin: 0 auto 42px;
+            color: var(--muted);
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        .eyebrow {
+            color: #c17c7c;
+            font-family: "Cinzel", serif;
+            font-size: 0.73rem;
+            letter-spacing: 4px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .red-line {
+            width: 75px;
+            height: 2px;
+            margin: 22px auto;
+            background: var(--bright-red);
+        }
+
+        .accent {
+            color: #c94a4a;
+        }
+
+        /* Navigation */
+
+        .navbar {
+            position: sticky;
+            z-index: 100;
+            top: 0;
+            border-bottom: 1px solid rgba(143, 21, 21, 0.45);
+            background: rgba(10, 10, 10, 0.96);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-inner {
+            display: flex;
+            min-height: 72px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+        }
+
+        .brand {
+            flex-shrink: 0;
+            color: var(--white);
+            font-family: "Cinzel", serif;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+        }
+
+        .brand span {
+            color: var(--bright-red);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 18px;
+        }
+
+        .nav-links a {
+            color: var(--soft-white);
+            font-family: "Cinzel", serif;
+            font-size: 0.66rem;
+            letter-spacing: 1.3px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #e05a5a;
+        }
+
+        /* Hero */
+
+        .hero {
+            position: relative;
+            display: flex;
+            min-height: 86vh;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    ellipse at center,
+                    rgba(100, 12, 12, 0.20),
+                    transparent 65%
+                );
+            content: "";
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+        }
+
+        .moon {
+            display: block;
+            margin-bottom: 22px;
+            color: #c9a4a4;
+            font-size: 2.8rem;
+        }
+
+        .hero h1 {
+            margin-bottom: 15px;
+            font-family: "UnifrakturCook", cursive;
+            font-size: clamp(3.3rem, 9vw, 6.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            text-shadow: 0 0 35px rgba(143, 21, 21, 0.28);
+        }
+
+        .hero-subtitle {
+            color: #d5b5b5;
+            font-family: "Cinzel", serif;
+            font-size: clamp(0.8rem, 2.5vw, 1.05rem);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .hero-description {
+            max-width: 610px;
+            margin: 26px auto 34px;
+            color: var(--soft-white);
+            font-size: 1.2rem;
+        }
+
+        .outline-link {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--red);
+            color: var(--white);
+            font-family: "Cinzel", serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            transition:
+                background 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .outline-link:hover {
+            transform: translateY(-2px);
+            border-color: var(--bright-red);
+            background: rgba(143, 21, 21, 0.18);
+        }
+
+        /* About */
+
+        .about-box {
+            max-width: 790px;
+            margin: 0 auto;
+            padding: 36px;
+            border-left: 2px solid var(--red);
+            background: rgba(24, 24, 24, 0.72);
+        }
+
+        .about-box p {
+            margin-bottom: 18px;
+            color: var(--soft-white);
+        }
+
+        .about-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Archive / book list */
+
+        .archive-notice {
+            margin-bottom: 34px;
+            padding: 16px 20px;
+            border: 1px solid rgba(143, 21, 21, 0.35);
+            background: rgba(40, 12, 12, 0.23);
+            color: #c9bcbc;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .archive-notice strong {
+            color: #dfb5b5;
+            font-weight: 600;
+        }
+
+        .search-wrap {
+            max-width: 640px;
+            margin: 0 auto 42px;
+        }
+
+        .search-wrap label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-family: "Cinzel", serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 17px;
+            border: 1px solid var(--border);
+            border-radius: 0;
+            background: rgba(22, 22, 22, 0.94);
+            color: var(--white);
+        }
+
+        .search-input::placeholder {
+            color: #817878;
+        }
+
+        .archive-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+
+        /* Author-supplied cover artwork */
+        .archive-cover {
+            float: left; width: 138px; height: 207px; object-fit: contain;
+            margin: 0 24px 14px 0; background: #080808;
+            border: 1px solid rgba(132, 48, 48, .55);
+            box-shadow: 0 12px 28px rgba(0,0,0,.38);
+        }
+        .archive-entry::after { content: ""; display: block; clear: both; }
+        .detail-cover { display: block; width: min(240px, 70%); max-height: 420px;
+            object-fit: contain; margin: 22px auto 28px; background: #080808;
+            border: 1px solid rgba(132,48,48,.6); box-shadow: 0 12px 35px rgba(0,0,0,.45); }
+        .cover-placeholder {
+            display: flex; align-items: center; justify-content: center; flex-direction: column;
+            gap: 10px; text-align: center; color: #e8dddd;
+            background: radial-gradient(ellipse at 50% 40%, rgba(113, 28, 39, .35), transparent 58%),
+                        linear-gradient(145deg, #1b1b1b, #080808 70%);
+            border: 1px solid rgba(132, 48, 48, .65);
+            box-shadow: 0 12px 28px rgba(0,0,0,.38);
+            font-family: "Cinzel", serif; letter-spacing: 2px;
+        }
+        .archive-cover-placeholder { float:left; width:138px; height:207px; margin:0 24px 14px 0; }
+        .detail-cover-placeholder { width:min(240px,70%); aspect-ratio:2/3; margin:22px auto 28px; padding:18px; }
+        .cover-placeholder .cover-symbol { color:#b52323; font-size:2.2rem; line-height:1; }
+        .cover-placeholder .cover-title { font-size:.86rem; line-height:1.7; }
+        .cover-placeholder .cover-author { color:#a99a9a; font-size:.55rem; letter-spacing:3px; }
+        @media (max-width: 600px) { .archive-cover-placeholder { width:108px; height:162px; margin-right:16px; } }
+        .poetry-cover-link { display:block; width:min(250px,100%); margin:24px auto; }
+        .poetry-cover { width:100%; height:auto; display:block; object-fit:contain;
+            border:1px solid rgba(132,48,48,.6); box-shadow:0 12px 35px rgba(0,0,0,.45); }
+        .detail-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+        .detail-back { border:1px solid #753030; padding:11px 16px; color:#e2caca;
+            background:#211717; font-family:"Cinzel",serif; font-size:.72rem;
+            letter-spacing:1.5px; cursor:pointer; }
+        .detail-back:hover { background:#351919; }
+
+        .archive-entry {
+            display: grid;
+            grid-template-columns: 74px minmax(0, 1fr);
+            gap: 24px;
+            padding: 26px;
+            border: 1px solid rgba(110, 42, 42, 0.5);
+            background: linear-gradient(
+                110deg,
+                rgba(29, 29, 29, 0.96),
+                rgba(18, 18, 18, 0.96)
+            );
+            transition:
+                border-color 0.25s ease,
+                background 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .archive-entry:hover {
+            transform: translateY(-2px);
+            border-color: #853131;
+            background: var(--card-hover);
+        }
+
+        .archive-number {
+            padding-top: 4px;
+            color: #9d4141;
+            font-family: "Cinzel", serif;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+
+        .archive-title {
+            margin-bottom: 4px;
+            color: var(--white);
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.1rem, 3vw, 1.45rem);
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 1.45;
+        }
+
+        .archive-genre {
+            display: block;
+            margin-bottom: 12px;
+            color: #c47b7b;
+            font-family: "Cinzel", serif;
+            font-size: 0.64rem;
+            letter-spacing: 1.5px;
+        }
+
+        .mature-tag {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 3px 8px;
+            border: 1px solid #5c2929;
+            color: #bdaaaa;
+            font-family: "Cinzel", serif;
+            font-size: 0.6rem;
+            letter-spacing: 1.5px;
+        }
+
+        .archive-teaser {
+            margin-bottom: 17px;
+            color: #c9c1c1;
+            font-size: 1.08rem;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            padding: 9px 16px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: #e1caca;
+            cursor: pointer;
+            font-family: "Cinzel", serif;
+            font-size: 0.68rem;
+            letter-spacing: 1.6px;
+            transition: background 0.2s ease;
+        }
+
+        .read-more:hover {
+            background: rgba(143, 21, 21, 0.25);
+        }
+
+        .no-results {
+            padding: 28px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        /* Modals */
+
+        .modal {
+            position: fixed;
+            z-index: 500;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 22px;
+            background: rgba(0, 0, 0, 0.86);
+            backdrop-filter: blur(7px);
+        }
+
+        .modal.open {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            width: min(700px, 100%);
+            max-height: 85vh;
+            padding: clamp(25px, 5vw, 44px);
+            border: 1px solid #702626;
+            background: #151313;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+            overflow-y: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 17px;
+            border: none;
+            background: transparent;
+            color: #d7a0a0;
+            cursor: pointer;
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .modal-number {
+            margin-bottom: 8px;
+            color: #bd6868;
+            font-family: "Cinzel", serif;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+        }
+
+        .modal-content h3 {
+            margin: 0 28px 12px 0;
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.45rem, 4vw, 2rem);
+            font-weight: 500;
+            line-height: 1.35;
+        }
+
+        .modal-content .archive-genre {
+            margin-bottom: 8px;
+        }
+
+        .modal-description {
+            margin-top: 18px;
+            color: #d5cccc;
+            white-space: pre-line;
+        }
+
+        .modal-description p {
+            margin-bottom: 16px;
+        }
+
+        .modal-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Poetry */
+
+        .poetry-panel {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 38px;
+            border: 1px solid rgba(110, 42, 42, 0.45);
+            background: rgba(23, 23, 23, 0.8);
+            text-align: center;
+        }
+
+        .poetry-symbol {
+            margin-bottom: 14px;
+            color: #b34b4b;
+            font-size: 2rem;
+        }
+
+        .poetry-panel h3 {
+            margin-bottom: 12px;
+            font-family: "Cinzel", serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .poetry-panel p {
+            color: var(--soft-white);
+        }
+
+        .poetry-note {
+            margin-top: 20px;
+            color: #b98686 !important;
+            font-style: italic;
+        }
+
+        /* Sound Chamber */
+
+        .song-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .song-entry {
+            display: grid;
+            grid-template-columns: 62px minmax(0, 1fr);
+            gap: 22px;
+            padding: 25px;
+            border: 1px solid rgba(110, 42, 42, 0.45);
+            background: rgba(25, 25, 25, 0.9);
+        }
+
+        .song-number {
+            color: #9d4141;
+            font-family: "Cinzel", serif;
+            font-size: 1.2rem;
+        }
+
+        .song-entry h3 {
+            margin-bottom: 3px;
+            font-family: "Cinzel", serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .song-artist {
+            margin-bottom: 8px;
+            color: #d4aaaa;
+            font-size: 1rem;
+        }
+
+        .song-genre {
+            margin-bottom: 10px;
+            color: #c47b7b;
+            font-family: "Cinzel", serif;
+            font-size: 0.62rem;
+            letter-spacing: 1.3px;
+        }
+
+        .song-teaser {
+            margin-bottom: 15px;
+            color: #c9c1c1;
+        }
+
+        .song-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .song-actions button,
+        .song-actions a {
+            display: inline-block;
+            padding: 8px 13px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: #e1caca;
+            cursor: pointer;
+            font-family: "Cinzel", serif;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+        }
+
+        .song-actions button:hover,
+        .song-actions a:hover {
+            background: rgba(143, 21, 21, 0.25);
+        }
+
+        /* Creator */
+
+        .creator-card {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 42px;
+            border: 1px solid rgba(110, 42, 42, 0.45);
+            background: rgba(24, 24, 24, 0.8);
+            text-align: center;
+        }
+
+        .creator-mark {
+            margin-bottom: 10px;
+            color: #c05b5b;
+            font-size: 2.2rem;
+        }
+
+        .creator-card h3 {
+            margin-bottom: 6px;
+            font-family: "UnifrakturCook", cursive;
+            font-size: clamp(2.4rem, 6vw, 3.5rem);
+        }
+
+        .creator-role {
+            margin-bottom: 25px;
+            color: #c47b7b;
+            font-family: "Cinzel", serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+        }
+
+        .creator-card p {
+            margin-bottom: 16px;
+            color: var(--soft-white);
+        }
+
+        .creator-quote {
+            margin-top: 24px;
+            color: #d9aaaa !important;
+            font-size: 1.35rem;
+            font-style: italic;
+        }
+
+        /* Contact */
+
+        .contact-text {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: var(--soft-white);
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 13px;
+        }
+
+        .contact-links a {
+            min-width: 125px;
+            padding: 11px 16px;
+            border: 1px solid var(--border);
+            color: #dfcaca;
+            font-family: "Cinzel", serif;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-align: center;
+            transition: background 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            background: rgba(143, 21, 21, 0.22);
+        }
+
+        .contact-note {
+            margin-top: 24px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 34px 20px;
+            border-top: 1px solid rgba(143, 21, 21, 0.4);
+            background: rgba(8, 8, 8, 0.85);
+            text-align: center;
+        }
+
+        .footer-brand {
+            margin-bottom: 6px;
+            color: #d8baba;
+            font-family: "Cinzel", serif;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+        }
+
+        footer p {
+            color: #8e8383;
+            font-size: 0.92rem;
+        }
+
+        .footer-motto {
+            margin-top: 9px;
+            color: #ad6666;
+            font-family: "Cinzel", serif;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+        }
+
+        /* Responsive layout */
+
+        @media (max-width: 800px) {
+            .nav-inner {
+                flex-direction: column;
+                justify-content: center;
+                gap: 8px;
+                padding: 12px 0;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 10px 15px;
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .hero {
+                min-height: 76vh;
+            }
+
+            .archive-entry {
+                grid-template-columns: 48px minmax(0, 1fr);
+                gap: 15px;
+                padding: 21px;
+            }
+
+            .song-entry {
+                grid-template-columns: 42px minmax(0, 1fr);
+                gap: 14px;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            body {
+                font-size: 17px;
+            }
+
+            .container {
+                width: 91%;
+            }
+
+            .brand {
+                font-size: 0.85rem;
+            }
+
+            .nav-links {
+                gap: 7px 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.59rem;
+                letter-spacing: 0.8px;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 75px 15px;
+            }
+
+            .hero-subtitle {
+                letter-spacing: 2px;
+            }
+
+            .hero-description {
+                font-size: 1.08rem;
+            }
+
+            .about-box,
+            .poetry-panel,
+            .creator-card {
+                padding: 24px;
+            }
+
+            .archive-cover { width: 112px; height: 168px; margin-right: 16px; }
+
+            .archive-entry {
+                grid-template-columns: 1fr;
+                gap: 5px;
+                padding: 21px;
+            }
+
+            .archive-number {
+                font-size: 0.85rem;
+            }
+
+            .archive-title {
+                font-size: 1.18rem;
+            }
+
+            .song-entry {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .song-number {
+                font-size: 0.85rem;
+            }
+
+            .modal {
+                padding: 12px;
+            }
+
+            .modal-content {
+                max-height: 90vh;
+                padding: 26px 22px;
+            }
+
+            .contact-links {
+                gap: 9px;
+            }
+
+            .contact-links a {
+                min-width: 42%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    
